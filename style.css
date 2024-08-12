@@ -6,6 +6,9 @@ body {
     background-color: #2d2d2d;
     color: #f0f0f0;
     position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
 }
 
 /* Estilos del Header y la Navegación */
@@ -274,16 +277,51 @@ footer {
 
     .logo {
         margin-bottom: 15px;
+        order: 2; /* Mueve la imagen al final del flujo del contenedor */
     }
 
     .logo img {
         height: 50px;
     }
 
+    nav ul li {
+        margin: 10px 0; /* Agrega espacio entre los elementos del menú en pantallas pequeñas */
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Reduce ligeramente el tamaño de la fuente para dispositivos móviles */
+    }
+
+    .slider {
+        max-width: 100%; /* Asegura que el slider ocupe el ancho completo en pantallas pequeñas */
+        margin: 20px auto; /* Ajusta el margen para darle espacio en dispositivos móviles */
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-text {
+        width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+
     .footer-content {
         flex-direction: column;
         align-items: center;
         padding: 10px 20px;
+    }
+
+    .footer-left {
+        order: 2; /* Asegura que la imagen esté al final */
+        margin-bottom: 15px;
     }
 
     .footer-left img {
@@ -303,4 +341,12 @@ footer {
         margin: 8px 0;
     }
 }
+
+
+
+
+
+
+
+
 

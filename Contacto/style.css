@@ -6,12 +6,9 @@ body {
     background-color: #2d2d2d;
     color: #f0f0f0;
     position: relative;
-    line-height: 1.6;
-}
-
-h2 {
-    text-align: center;
-    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
 }
 
 /* Estilos del Header y la Navegación */
@@ -57,14 +54,14 @@ li:hover {
 }
 
 .logo {
-    flex: 0 1 auto;
+    flex: 0 1 auto; /* Permite que el logo se ajuste a su tamaño natural */
     display: flex;
     justify-content: center;
 }
 
 .logo img {
-    height: 70px;
-    width: auto;
+    height: 70px; /* Ajusta este valor según sea necesario */
+    width: auto; /* Mantén la proporción del logo */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -119,6 +116,7 @@ input[type="text"], input[type="tel"], input[type="email"], textarea, select {
     color: #f0f0f0;
     font-size: 16px;
     width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no rompa el layout */
 }
 
 textarea {
@@ -175,19 +173,19 @@ button:hover {
     }
 }
 
-
 /* Estilos del Pie de Página */
 footer {
     background-color: #1c1c1c;
-    padding: 0; /* Eliminar el padding superior e inferior */
+    padding: 20px 0; /* Ajusta el padding para mejorar la apariencia */
     color: #f0f0f0;
     position: relative;
     z-index: 2;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Asegurar que el contenido esté distribuido */
+    justify-content: space-between; /* Asegura que el contenido esté distribuido */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */
 }
 
 .footer-content {
@@ -196,24 +194,24 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     max-width: 1200px;
-    width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+    width: 100%;
     padding: 0 20px;
-    flex: 1;
+    box-sizing: border-box; /* Asegura que el padding no rompa el layout */
 }
 
 .footer-left {
     display: flex;
     align-items: center;
-    margin-left: 0; /* Eliminar cualquier margen a la izquierda */
-    margin-right: auto; /* Empuja el contenido a la derecha */
-    height: 100%; /* Asegurar que el logo ocupe todo el alto del footer */
+    margin-left: 0;
+    margin-right: auto;
+    height: 100%;
 }
 
 .footer-left img {
-    height: 100%; /* Ocupa toda la altura del footer */
-    max-height: 70px; /* Limitar la altura máxima del logo */
-    object-fit: contain; /* Asegurar que la imagen no se deforme */
-    margin-left: 0; /* Quitar cualquier margen izquierdo */
+    height: 100%;
+    max-height: 70px;
+    object-fit: contain;
+    margin-left: 0;
 }
 
 .social-links {
@@ -267,13 +265,13 @@ footer {
 @media (max-width: 768px) {
     .nav-wrapper {
         flex-direction: column;
-        align-items: center; /* Centra los elementos del menú de navegación */
+        align-items: center;
     }
 
     nav ul {
         flex-direction: column;
-        width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
-        align-items: center; /* Alinea los elementos en el centro */
+        width: 100%;
+        align-items: center;
     }
 
     .logo {
@@ -291,7 +289,7 @@ footer {
     }
 
     .footer-left img {
-        max-height: 60px; /* Reducir la altura máxima en pantallas pequeñas */
+        max-height: 60px;
     }
 
     .footer-center, .footer-right {
@@ -307,4 +305,3 @@ footer {
         margin: 8px 0;
     }
 }
-
