@@ -1,0 +1,255 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    position: relative;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos del Header y la Navegación */
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.2);
+}
+
+.logo {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Estilos del Formulario de Contacto */
+#contacto {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#contacto h2, #contacto p {
+    color: #f0f0f0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #f0f0f0;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f0f0f0;
+    font-size: 16px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* Estilos del Pie de Página */
+footer {
+    background-color: #1c1c1c;
+    padding: 0; /* Eliminar el padding superior e inferior */
+    color: #f0f0f0;
+    position: relative;
+    z-index: 2;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegurar que el contenido esté distribuido */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+    padding: 0 20px;
+    flex: 1;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Eliminar cualquier margen a la izquierda */
+    margin-right: auto; /* Empuja el contenido a la derecha */
+    height: 100%; /* Asegurar que el logo ocupe todo el alto del footer */
+}
+
+.footer-left img {
+    height: 100%; /* Ocupa toda la altura del footer */
+    max-height: 70px; /* Limitar la altura máxima del logo */
+    object-fit: contain; /* Asegurar que la imagen no se deforme */
+    margin-left: 0; /* Quitar cualquier margen izquierdo */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #f0f0f0;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #1db954;
+}
+
+.footer-center, .footer-right {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.footer-center ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li, .footer-right ul li {
+    margin: 10px 0;
+}
+
+.footer-center h3, .footer-right h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-center ul li a:hover, .footer-right ul li a:hover {
+    color: #1db954;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .footer-left img {
+        max-height: 60px; /* Reducir la altura máxima en pantallas pequeñas */
+    }
+
+    .footer-center, .footer-right {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-center h3, .footer-right h3 {
+        font-size: 16px;
+    }
+
+    .footer-center ul li, .footer-right ul li {
+        margin: 8px 0;
+    }
+}
