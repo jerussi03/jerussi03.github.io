@@ -25,7 +25,7 @@
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Por favor, llena el siguiente formulario para que podamos comunicarnos contigo lo antes posible.</p>
-            <form action="enviar_formulario.php" method="post">
+            <form action="https://formsubmit.co/jerussigonzalez17@gmail.com" method="POST" />
                 <label for="nombre">Nombre Completo:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -44,7 +44,8 @@
                     <option value="telefono">Llamada Telefónica</option>
                     <option value="whatsapp">WhatsApp</option>
                 </select>
-
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://jerussi03.github.io/index.html">
                 <button type="submit">Enviar</button>
             </form>
         </section>
