@@ -1,0 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+}
+
+/* Estilos del Header y la Navegación */
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.2);
+}
+
+.logo {
+    flex: 0 1 auto; /* Permite que el logo se ajuste a su tamaño natural */
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 70px; /* Ajusta este valor según sea necesario */
+    width: auto; /* Mantén la proporción del logo */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 520px; /* Ajusta esta altura según lo necesites */
+    overflow: hidden;
+    background-color: #a02c2c; /* Fondo de respaldo en caso de que las imágenes no se carguen */
+}
+
+.banner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner-img.active {
+    opacity: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em; /* Ajusta el tamaño de la fuente según tus necesidades */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    pointer-events: none; /* Asegura que el texto no interfiera con la interacción del banner */
+}
+
+/* Sección About */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #1a1a1a;
+    position: relative;
+    z-index: 2;
+}
+
+.about-text {
+    width: 60%;
+    margin-right: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;
+    padding: 0; /* Eliminar el padding superior e inferior */
+    color: #f0f0f0;
+    position: relative;
+    z-index: 2;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegurar que el contenido esté distribuido */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+    padding: 0 20px;
+    flex: 1;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Eliminar cualquier margen a la izquierda */
+    margin-right: auto; /* Empuja el contenido a la derecha */
+    height: 100%; /* Asegurar que el logo ocupe todo el alto del footer */
+}
+
+.footer-left img {
+    height: 100%; /* Ocupa toda la altura del footer */
+    max-height: 70px; /* Limitar la altura máxima del logo */
+    object-fit: contain; /* Asegurar que la imagen no se deforme */
+    margin-left: 0; /* Quitar cualquier margen izquierdo */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #f0f0f0;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #1db954;
+}
+
+.footer-center, .footer-right {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.footer-center ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li, .footer-right ul li {
+    margin: 10px 0;
+}
+
+.footer-center h3, .footer-right h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-center ul li a:hover, .footer-right ul li a:hover {
+    color: #1db954;
+}
+
+/* Portafolio */
+.portfolio {
+    padding: 20px;
+    background-color: #2d2d2d; /* Color de fondo para la sección del portafolio */
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 50px; /* Espacio entre filas */
+    grid-column-gap: 15px; /* Espacio entre columnas */
+}
+
+/* Estilos para las imágenes del portafolio con efecto de zoom */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Añade transición para el efecto de zoom */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.1); /* Amplía la imagen al pasar el cursor */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-item p {
+    padding: 10px;
+    margin: 0;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegura que el modal esté sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Oculta el contenido desbordado */
+    background-color: rgba(0,0,0,0.8); /* Fondo oscuro con opacidad */
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del carrusel */
+.modal-carousel {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    max-width: 1200px; /* Limita el ancho máximo del carrusel */
+    max-height: 800px; /* Limita la altura máxima del carrusel */
+}
+
+.modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen para que se ajuste dentro del contenedor */
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que los botones estén sobre las imágenes */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.btn-back {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que el botón esté sobre las imágenes */
+}
+
+.btn-back:hover {
+    background-color: #ddd;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+}
+
+.close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,403 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+/* Estilos del Header y la Navegación */
+header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.2);
+}
+
+.logo {
+    flex: 0 1 auto; /* Permite que el logo se ajuste a su tamaño natural */
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 70px; /* Ajusta este valor según sea necesario */
+    width: auto; /* Mantén la proporción del logo */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Estilos de la Sección Hero */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333;
+}
+
+.hero img {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos de la Sección About */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #1a1a1a;
+}
+
+.about-text {
+    width: 60%;
+    margin-right: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilos del Pie de Página */
+/* Estilos del Pie de Página */
+footer {
+    background-color: #1c1c1c;
+    padding: 0; /* Eliminar el padding superior e inferior */
+    color: #f0f0f0;
+    position: relative;
+    z-index: 2;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegurar que el contenido esté distribuido */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+    padding: 0 20px;
+    flex: 1;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Eliminar cualquier margen a la izquierda */
+    margin-right: auto; /* Empuja el contenido a la derecha */
+    height: 100%; /* Asegurar que el logo ocupe todo el alto del footer */
+}
+
+.footer-left img {
+    height: 100%; /* Ocupa toda la altura del footer */
+    max-height: 70px; /* Limitar la altura máxima del logo */
+    object-fit: contain; /* Asegurar que la imagen no se deforme */
+    margin-left: 0; /* Quitar cualquier margen izquierdo */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #f0f0f0;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #1db954;
+}
+
+.footer-center, .footer-right {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.footer-center ul, .footer-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li, .footer-right ul li {
+    margin: 10px 0;
+}
+
+.footer-center h3, .footer-right h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.footer-center ul li a, .footer-right ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-center ul li a:hover, .footer-right ul li a:hover {
+    color: #1db954;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center; /* Centra los elementos del menú de navegación */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+        align-items: center; /* Alinea los elementos en el centro */
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        order: 2; /* Mueve la imagen al final del flujo del contenedor */
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Agrega espacio entre los elementos del menú en pantallas pequeñas */
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Reduce ligeramente el tamaño de la fuente para dispositivos móviles */
+    }
+
+    .slider {
+        max-width: 100%; /* Asegura que el slider ocupe el ancho completo en pantallas pequeñas */
+        margin: 20px auto; /* Ajusta el margen para darle espacio en dispositivos móviles */
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-text {
+        width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+        margin-bottom: 20px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 300px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .footer-left {
+        order: 2; /* Asegura que la imagen esté al final */
+        margin-bottom: 15px;
+    }
+
+    .footer-left img {
+        max-height: 60px; /* Reducir la altura máxima en pantallas pequeñas */
+    }
+
+    .footer-center, .footer-right {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-center h3, .footer-right h3 {
+        font-size: 16px;
+    }
+
+    .footer-center ul li, .footer-right ul li {
+        margin: 8px 0;
+    }
+}
+
+/* Codigo del menu de Paquetes */
+
+.container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin-top: 1;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60dvh;
+    text-align: center;
+}
+section {
+    background-color: #69696b;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+button {
+    background-color: #E3DED4;
+    border: none;
+    border-radius: 12px; /* Bordes más redondeados */
+    padding: 25px 50px;
+    font-size: 24px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    outline: none; /* Quita el borde de enfoque */
+}
+button:hover {
+    background-color: #5c7da8;
+}
+button:active {
+    transform: scale(0.98);
+}
+.options {
+    display: none;
+    margin-top: 10px;
+}
+.options button {
+    background-color: #0c0101; 
+    margin: 10px auto;
+    width: calc(100% - 40px); /* Full width minus padding */
+    padding: 20px; 
+    font-size: 20px; 
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+    outline: none; /* Quita el borde de enfoque */
+}
+.options button:hover {
+    background-color: #306349; 
+}
+.options button:active {
+    transform: scale(0.98);
+}
+.show {
+    display: block;
+}
+
+/* Contenedor de las imágenes */
+.image-container {
+    padding: 300px; /* Espacio interno alrededor del contenedor */
+    margin-bottom: 100px; /* Espacio suficiente en la parte inferior para evitar superposición */
+}
+
+/* Contenedor de conjuntos de imágenes */
+.image-set {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias filas */
+    gap: 300px; /* Espacio entre las imágenes */
+}
+
+.image-item {
+    flex: 1 1 auto; /* Permite que los elementos se ajusten dentro del contenedor */
+    max-width: 250px; /* Tamaño máximo de cada imagen */
+    max-height: 400px; /* Altura máxima de cada imagen */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+    margin-bottom: 20px; /* Espacio debajo de cada imagen y botón */
+    text-align: center; /* Centra el texto y los botones dentro del contenedor */
+}
+
+/* Estilo de las imágenes */
+.image-item img {
+    width: 100%; 
+    height: auto; 
+}
+
+.image-item button {
+    display: inline-block; 
+    margin-top: 5px;
+    padding: 10px 20px; 
+    background-color: #bd216a;
+    color: #080000;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+}
+
+#graduacion-images {
+    margin-top: 50px; /* Ajusta según necesites */
+}
+
+#graduacion-images .image-item {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#graduacion-images img {
+    width: 350%;
+    transform: translateX(-300px);
+    margin-top: 20px; /* Espacio adicional arriba de la imagen si es necesario */
+}
