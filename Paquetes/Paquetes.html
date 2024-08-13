@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Minjarez Fotografía</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Portafolio/index.html">Portafolio</a></li>
+                    <li class="logo"><a href="../index.html"><img src="../img/logo.png" alt="José Minjarez Fotografía"></a></li>
+                    <li><a href="Paquetes.html">Paquetes</a></li>
+                    <li><a href="../Contacto/index.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+        <main>
+            <section>
+                <button id="showOptionsBtn" style="color: black;">VER PAQUETES</button>
+                <div id="options" class="options" style="display: none;">
+                    <button class="package-btn" data-package="boda">Boda</button>
+                    <button class="package-btn" data-package="quinceañera">Quinceañera</button>
+                    <button class="package-btn" data-package="graduacion">Graduación</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Contenedor para las imágenes -->
+        <div id="imageContainer" class="image-container">
+            <div class="image-set" id="boda-images" style="display: none;">
+                <div class="image-item">
+                    <img src="basico.jpeg" alt="Boda Imagen 1">
+                    <form action="../Contacto/index.html">
+  <button type="submit">Seleccionar Paquete</button>
+</form>
+                </div>
+                <div class="image-item">
+                    <img src="gold.jpeg" alt="Boda Imagen 2">
+                    <form action="../Contacto/index.html">
+  <button type="submit">Seleccionar Paquete</button>
+</form>
+                </div>
+                <div class="image-item">
+                    <img src="plus.jpeg" alt="Boda Imagen 3">
+                    <form action="../Contacto/index.html">
+  <button type="submit">Seleccionar Paquete</button>
+</form>
+                </div>
+            </div>
+            <div class="image-set" id="quinceañera-images" style="display: none;">
+                <div class="image-item">
+                    <img src="quinceañera1.jpg" alt="Quinceañera Imagen 1">
+                    <form action="../Contacto/index.html">
+  <button type="submit">Seleccionar Paquete</button>
+</form>
+                </div>
+                <div class="image-item">
+                    <img src="quinceañera plus.jpg" alt="Quinceañera Imagen 2">
+                    <form action="../Contacto/index.html">
+  <button type="submit">Seleccionar Paquete</button>
+</form>
+                </div>
+                <div class="image-item">
+                    <img src="quinceañera gold.jpg" alt="Quinceañera Imagen 3">
+                    <form action="../Contacto/index.html">
+  <button type="submit">Seleccionar Paquete</button>
+</form>
+                </div>
+                <div class="image-item">
+                    <img src="quinceanera digital.jpg" alt="Quinceañera Imagen 4">
+                    <button>  Seleccionar Paquete </button>
+                </div>
+            </div>
+            <div class="image-set" id="graduacion-images" style="display: none;">
+                <div class="image-item">
+                    <img src="graduacion.jpg" alt="Graduación Imagen 1">
+                    <form action="../Contacto/index.html">
+                        <button type="submit">Seleccionar Paquete</button>
+                      </form>
+                </div>
+            </div>                                          
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="../img/logo.png" alt="José Minjarez Fotografía">
+                    <div class="social-links"></div>
+                </div>
+
+                <div class="footer-center">
+                    <h3>Otros proyectos</h3>
+                    <ul>
+                        <li><a href="../img/index.html">Estudio</a></li>
+                        <li><a href="../img/index.html">Videos</a></li>
+                        <li><a href="../img/index.html">Otros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <h3>Redes sociales</h3>
+                    <ul>
+                        <li>
+                            <a href="https://wa.me/523231766421?text=Que%20tal." target="_blank">
+                                <img src="../img/whatsapplogo.png" width="30" height="30" alt="WhatsApp">
+                            </a>
+                        </li>
+                         <li><a href="https://t.me/share/url?url=&amp;text=Que%20tal."><img src="../img/telegramlogo.png" width="30" height="30" alt="Telegram"> </a></li>
+                        <li><a href="https://www.facebook.com/joseminjaresfotografia"><img src="../img/facebooklogo.PNG" width="30" height="30" alt="Facebook"> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
